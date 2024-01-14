@@ -28,7 +28,7 @@ public class AddCommandHandler
         var meal = deserializer.Deserialize<Meal>(await File.ReadAllTextAsync(filepath));
 
         await _mealService.Insert(meal);
-        Console.WriteLine($"Meal added (digest:md5:{meal.Id})");
+        Console.WriteLine($"{meal.Id} added");
         
         return 0;
     }

@@ -22,9 +22,9 @@ public class MealService : IMealService
         return await _mealRepository.FindById(id);
     }
 
-    public async Task<Meal?> FindByName(string name)
+    public async Task<Meal?> FindBySlug(string slug)
     {
-        return await _mealRepository.FindByName(name);
+        return await _mealRepository.FindBySlug(slug);
     }
 
     public async Task Insert(Meal meal)

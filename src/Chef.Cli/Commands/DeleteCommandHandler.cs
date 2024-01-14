@@ -21,7 +21,7 @@ public class DeleteCommandHandler
             return 0;
         }
 
-        meal = await _mealService.FindByName(toDelete);
+        meal = await _mealService.FindBySlug(toDelete);
         if (meal != null)
         {
             await _mealService.Delete(meal);

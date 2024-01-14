@@ -23,9 +23,9 @@ internal class MealRepository : IMealRepository
         return await Task.Run(() => _context.Meals.FindOne(m => m.Id == id || m.Id.StartsWith(id)));
     }
 
-    public async Task<Meal> FindByName(string name)
+    public async Task<Meal> FindBySlug(string slug)
     {
-        return await Task.Run(() => _context.Meals.FindOne(m => m.Name == name));
+        return await Task.Run(() => _context.Meals.FindOne(m => m.Slug == slug));
     }
 
     public async Task Insert(Meal meal)

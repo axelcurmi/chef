@@ -18,7 +18,7 @@ public class ListCommandHandler
         Console.WriteLine($"{"ID",-32} {"Name"}");
         foreach (var meal in meals)
         {
-            Console.WriteLine($"{meal.Id,-32} {meal.Name}");
+            Console.WriteLine($"{meal.Id,-32} {meal.Slug}");
         }
         return 0;
     }
